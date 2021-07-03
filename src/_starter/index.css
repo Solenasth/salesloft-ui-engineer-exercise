@@ -143,3 +143,14 @@ code {
   src: url('./assets/fonts/proxima-nova-900-italic.woff2') format('woff2'),
     url('./assets/fonts/proxima-nova-900-italic.woff') format('woff');
 }
+
+/* Adding color vars as they are used for the pure css version */
+
+:root {
+  --white: #ffffff;
+
+  --bg-grey: #f9fafb;
+
+  --grey-lightest: #e5e5e5;
+  --grey-darkest: #3a3a3a;
+}

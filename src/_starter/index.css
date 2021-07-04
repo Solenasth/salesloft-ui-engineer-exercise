@@ -152,5 +152,10 @@ code {
   --bg-grey: #f9fafb;
 
   --grey-lightest: #e5e5e5;
+  --grey-dark: #4f5359;
   --grey-darkest: #3a3a3a;
+
+  --blue-dark: #297dae;
+
+  --orange: #ffa726;
 }

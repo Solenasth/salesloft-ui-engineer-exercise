@@ -147,15 +147,19 @@ code {
 /* Adding color vars as they are used for the pure css version */
 
 :root {
+  /* general */
   --white: #ffffff;
-
+  /* backgrounds */
   --bg-grey: #f9fafb;
-
+  /* greys */
   --grey-lightest: #e5e5e5;
   --grey-dark: #4f5359;
   --grey-darkest: #3a3a3a;
-
+  /* blues */
   --blue-dark: #297dae;
-
+  /* vendor colors */
+  --vendor-twitter-blue: #1da1f2;
+  --vendor-linked-in-blue: #0077b5;
+  /* oranges  */
   --orange: #ffa726;
 }

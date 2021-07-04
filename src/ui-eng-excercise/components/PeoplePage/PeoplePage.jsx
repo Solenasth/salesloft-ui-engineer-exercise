@@ -21,7 +21,6 @@ const PeoplePage = ({ payload }) => {
         <Panel />
         <Panel />
       </div>
-      {/* <div>{JSON.stringify(payload)}</div> */}
     </div>
   );
 };

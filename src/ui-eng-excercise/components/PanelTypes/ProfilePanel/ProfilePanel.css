@@ -1,0 +1,48 @@
+.profile-panel-titlebar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--grey-lightest);
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+}
+
+.profile-panel-titlebar__star-icon {
+  color: var(--orange);
+}
+
+.profile-panel-content {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-panel-content__name {
+  color: var(--grey-dark);
+  font-family: proxima-nova;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1;
+  margin: 0.25em;
+}
+
+.profile-panel-content__title {
+  color: var(--grey-dark);
+  font-family: proxima-nova;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0.25em;
+}
+
+.profile-panel-content__company {
+  color: var(--blue-dark);
+  font-family: proxima-nova;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+  text-decoration: none;
+}

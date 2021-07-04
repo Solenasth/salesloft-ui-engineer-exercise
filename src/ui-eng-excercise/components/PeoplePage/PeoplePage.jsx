@@ -13,10 +13,11 @@ const PeoplePage = (
     <div className="page">
       <TitleBar title="People" />
       <div className="page-layout">
-        <Panel className="page__panel" />
-        <Panel className="page__panel" />
-        <Panel className="page__panel" />
-        <Panel className="page__panel" />
+        <Panel type="profile" />
+        <Panel type="activities" />
+        <Panel />
+        <Panel />
+        <Panel />
       </div>
     </div>
   );

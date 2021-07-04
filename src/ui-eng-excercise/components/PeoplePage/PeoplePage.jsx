@@ -15,8 +15,16 @@ const PeoplePage = ({ payload }) => {
           title={payload.title}
           company_name={payload.person_company_name}
           company_website={payload.person_company_website}
+          linkedin_url={payload.linkedin_url}
+          twitter_handle={payload.twitter_handle}
+          crm_url={payload.crm_url}
+          personal_website={payload.personal_website}
         />
-        <Panel type="activities" />
+        <Panel type="activities" className="page-layout__main-panel" />
+        <Panel />
+        <Panel />
+        <Panel />
+        <Panel />
         <Panel />
         <Panel />
         <Panel />

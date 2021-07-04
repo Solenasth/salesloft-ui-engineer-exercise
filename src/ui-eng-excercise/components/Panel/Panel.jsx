@@ -14,6 +14,10 @@ const Panel = ({ type, ...rest }) => {
             title={rest.title}
             company_website={rest.company_website}
             company_name={rest.company_name}
+            linkedin_url={rest.linkedin_url}
+            twitter_handle={rest.twitter_handle}
+            crm_url={rest.crm_url}
+            personal_website={rest.personal_website}
           />
         );
       case 'activities':
@@ -22,7 +26,9 @@ const Panel = ({ type, ...rest }) => {
         return <PlaceholderPanel />;
     }
   };
-  return <div className="panel">{renderPanelType(type)}</div>;
+  return (
+    <div className={`panel ${rest.className}`}>{renderPanelType(type)}</div>
+  );
 };
 
 export default Panel;

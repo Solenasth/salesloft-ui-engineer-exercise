@@ -26,6 +26,7 @@
   font-size: 24px;
   line-height: 1;
   margin: 0.25em;
+  text-align: center;
 }
 
 .profile-panel-content__title {
@@ -45,4 +46,24 @@
   line-height: 1.2;
   margin: 0;
   text-decoration: none;
+}
+
+.profile-panel-content__media-links {
+  display: flex;
+  justify-content: space-between;
+  width: 6em;
+  margin: 1em;
+}
+
+.profile-panel-content__media-links .cloud-icon,
+.profile-panel-content__media-links .twitter-icon {
+  color: var(--vendor-twitter-blue);
+}
+
+.profile-panel-content__media-links .linkedin-icon {
+  color: var(--vendor-linked-in-blue);
+}
+
+.profile-panel-content__media-links .link-icon {
+  color: var(--grey-darkest);
 }

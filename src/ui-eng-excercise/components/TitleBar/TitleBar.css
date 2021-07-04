@@ -2,7 +2,6 @@
   background-color: var(--white);
   box-shadow: inset 0px -1px 0px var(--grey-lightest);
   padding: 1em 1.2em;
-  width: 100%;
 }
 
 .title-bar__title {

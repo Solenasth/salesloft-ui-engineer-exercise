@@ -1,5 +1,6 @@
 .page {
   background-color: var(--bg-grey);
+  height: 100%;
 }
 
 .page-layout {

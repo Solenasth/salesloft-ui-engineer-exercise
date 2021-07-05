@@ -1,18 +1,27 @@
 .page {
   background-color: var(--bg-grey);
   height: 100%;
+  overflow-y: scroll;
 }
 
 .page-layout {
   margin: 1em;
   display: grid;
   grid-template-columns: 3fr 6fr 4fr;
-  grid-auto-rows: minmax(10rem, auto);
+  grid-row: 1;
+  grid-auto-rows: minmax(9.8rem, auto);
   gap: 1em;
   align-content: stretch;
 }
 
 .page-layout__main-panel {
   grid-column: 2;
-  grid-row: 1 / 5;
+  grid-row: 1;
+}
+
+.layout-right-column,
+.layout-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }

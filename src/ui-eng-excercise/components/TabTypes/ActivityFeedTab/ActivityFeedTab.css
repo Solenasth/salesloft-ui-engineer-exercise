@@ -93,6 +93,12 @@ and their sizes don't match so a single padding won't do.
 so even tho they're aligned, it doesn't look right
 probably the best solution would be to modify the icons so they're centered. 
 but i don't want to touch those components.*/
+
+/* Later i would fix a similar issue by using display flex and centering the icon,
+but at the moment of this fix, this didn't occur to me. i decided to keep this as is 
+in order to focus on the rest of the excercise, 
+as well as portraying my train of thought accurately */
+
 .activity-feed-secondary-button__plusicon {
   padding-top: 0.6em;
 }

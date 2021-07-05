@@ -1,6 +1,8 @@
 import React from 'react';
 import './ActivityFeedTab.css';
 import { default as ChevronSmDownIcon } from '../../../../_starter/shared/Icons/ChevronSmDown';
+import { default as PhoneIcon } from '../../../../_starter/shared/Icons/Phone';
+import { default as PlusIcon } from '../../../../_starter/shared/Icons/Plus';
 
 const ActivityFeedTab = () => {
   return (
@@ -17,8 +19,18 @@ const ActivityFeedTab = () => {
           </button>
         </div>
         <div className="right-buttons">
-          <button className="secondary-button">Log a Call</button>
-          <button>Add a Note</button>
+          <button className="activity-feed-secondary-button">
+            <span className="activity-feed-secondary-button__phoneicon">
+              <PhoneIcon />
+            </span>
+            <span>Log a Call</span>
+          </button>
+          <button className="activity-feed-secondary-button">
+            <span className="activity-feed-secondary-button__plusicon">
+              <PlusIcon />
+            </span>
+            <span>Add a Note</span>
+          </button>
         </div>
       </div>
       <div className="activity-feed__upcoming-activities">

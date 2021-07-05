@@ -18,7 +18,7 @@ const ProfilePanel = ({
   personal_website
 }) => {
   return (
-    <>
+    <div className="profile-panel">
       <div className="profile-panel-titlebar">
         <StarOutlinedIcon className="profile-panel-titlebar__star-icon" />
         <EllipsisHorizontalIcon />
@@ -46,7 +46,7 @@ const ProfilePanel = ({
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

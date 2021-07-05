@@ -1,19 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ActivityFeedTab.css';
 import { default as ChevronSmDownIcon } from '../../../../_starter/shared/Icons/ChevronSmDown';
 import { default as PhoneIcon } from '../../../../_starter/shared/Icons/Phone';
 import { default as PlusIcon } from '../../../../_starter/shared/Icons/Plus';
 import EventCard from '../../EventCard';
 
-// useEffect(() => {
-//   fetch('https://jsonplaceholder.typicode.com/posts')
-//     .then(response => response.json())
-//     .then(data => {
-//       setPosts(data);
-//     });
-// }, []);
-
 const ActivityFeedTab = ({ activities, upcoming_activities }) => {
+  const [activitiesData, setActivitiesData] = useState({});
+  const [upcomingActivitiesData, setUpcomingActivitiesData] = useState({});
+
+  //fetch activities
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(activities._href);
+      const activitiesData = await response.json();
+      return activitiesData;
+    };
+    if (activities && activities._href)
+      fetchData().then(activitiesData => console.log(activitiesData));
+  }, [activities]);
+
+  //fetch upcoming activitites
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(upcoming_activities._href);
+      const upcomingActivitiesData = await response.json();
+      return upcomingActivitiesData;
+    };
+    if (upcoming_activities && upcoming_activities._href)
+      fetchData().then(upcomingActivitiesData =>
+        console.log(upcomingActivitiesData)
+      );
+  }, [upcoming_activities]);
+
   return (
     <div className="activity-feed">
       <div className="activity-feed__top-buttons">

@@ -1,0 +1,54 @@
+.activity-feed {
+  padding: 1.3rem;
+}
+
+.activity-feed__top-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-buttons,
+.right-buttons {
+  display: flex;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.activity-feed-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  font-family: proxima-nova;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  border-radius: 4px;
+  width: 7.5em;
+  height: 3.1em;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+.activity-feed-button--person {
+  color: var(--white);
+  border-color: var(--blue);
+  background-color: var(--blue);
+}
+
+.activity-feed-button--person::after {
+  content: '';
+  height: 100%;
+  width: 1px;
+  background-color: var(--grey-lightest);
+  position: absolute;
+  top: 0;
+  right: calc(50% - 1px);
+}
+
+.activity-feed-button--activity {
+  color: var(--grey-darkest);
+  border-color: var(--grey-lightest);
+  background-color: var(--white);
+}

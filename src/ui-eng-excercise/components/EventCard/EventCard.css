@@ -1,0 +1,67 @@
+.event-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.event-card__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  color: darkred;
+  background-color: lightcoral;
+  border-radius: 100%;
+  min-width: 2em;
+  height: 2em;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4.3rem;
+  padding: 1em;
+  background: #ffffff;
+  border: 1px solid var(--grey-lightest);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.card-body__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.card-dynamic-title {
+  font-family: proxima-nova;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--grey-dark);
+  margin: 0;
+}
+
+.card-dynamic-content {
+  font-family: proxima-nova;
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--grey);
+  margin: 0;
+}
+.card-datetime {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4em;
+}
+.card-datetime__date,
+.card-datetime__time {
+  font-family: proxima-nova;
+  margin: 0;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--grey);
+}

@@ -7,7 +7,12 @@ const Tab = ({ tabType, title, ...rest }) => {
   const renderTabType = type => {
     switch (type) {
       case 'activityFeed':
-        return <ActivityFeedTab />;
+        return (
+          <ActivityFeedTab
+            activities={rest.activities}
+            upcoming_activities={rest.upcoming_activities}
+          />
+        );
       default:
         return <PlaceholderTab />;
     }

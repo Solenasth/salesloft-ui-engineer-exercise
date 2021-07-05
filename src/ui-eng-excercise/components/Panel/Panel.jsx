@@ -21,7 +21,11 @@ const Panel = ({ type, ...rest }) => {
           />
         );
       case 'activities':
-        return <ActivitiesPanel />;
+        /* we propagate the entire payload here, because distributing it's props is the responsability of the 
+        ActivitiesPanel component, since it contains 3 diferent components within that may require diferent data
+        from the payload, I could just send activities and upcoming_activities, but i think this reflects better 
+        the actual behaviour we would have */
+        return <ActivitiesPanel payload={rest.payload} />;
       default:
         return <PlaceholderPanel />;
     }

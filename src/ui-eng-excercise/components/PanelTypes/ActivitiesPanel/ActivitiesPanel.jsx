@@ -8,7 +8,12 @@ const ActivitiesPanel = ({ payload }) => {
     <>
       <div className="activities-panel">
         <Tabs>
-          <Tab tabType="activityFeed" title="Activity"></Tab>
+          <Tab
+            tabType="activityFeed"
+            title="Activity"
+            activities={payload.activities}
+            upcoming_activities={payload.upcoming_activities}
+          ></Tab>
           <Tab title="Tracking"></Tab>
           <Tab tabType="activityFeed" title="Reminders"></Tab>
         </Tabs>

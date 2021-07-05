@@ -20,7 +20,11 @@ const PeoplePage = ({ payload }) => {
           crm_url={payload.crm_url}
           personal_website={payload.personal_website}
         />
-        <Panel type="activities" className="page-layout__main-panel" />
+        <Panel
+          type="activities"
+          className="page-layout__main-panel"
+          payload={payload}
+        />
         <Panel />
         <Panel />
         <Panel />

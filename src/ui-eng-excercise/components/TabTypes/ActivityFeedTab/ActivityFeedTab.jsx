@@ -6,18 +6,18 @@ import { default as PlusIcon } from '../../../../_starter/shared/Icons/Plus';
 import EventCard from '../../EventCard';
 
 const ActivityFeedTab = ({ activities, upcoming_activities }) => {
-  const [activitiesData, setActivitiesData] = useState({});
-  const [upcomingActivitiesData, setUpcomingActivitiesData] = useState({});
+  const [activitiesData, setActivitiesData] = useState([]);
+  const [upcomingActivitiesData, setUpcomingActivitiesData] = useState([]);
 
   //fetch activities
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(activities._href);
       const activitiesData = await response.json();
-      return activitiesData;
+      return activitiesData.data;
     };
     if (activities && activities._href)
-      fetchData().then(activitiesData => console.log(activitiesData));
+      fetchData().then(activitiesData => setActivitiesData(activitiesData));
   }, [activities]);
 
   //fetch upcoming activitites
@@ -25,13 +25,16 @@ const ActivityFeedTab = ({ activities, upcoming_activities }) => {
     const fetchData = async () => {
       const response = await fetch(upcoming_activities._href);
       const upcomingActivitiesData = await response.json();
-      return upcomingActivitiesData;
+      return upcomingActivitiesData.data;
     };
     if (upcoming_activities && upcoming_activities._href)
       fetchData().then(upcomingActivitiesData =>
-        console.log(upcomingActivitiesData)
+        setUpcomingActivitiesData(upcomingActivitiesData)
       );
   }, [upcoming_activities]);
+
+  const renderPastActivitites = activities =>
+    activities.map(() => <EventCard />);
 
   return (
     <div className="activity-feed">
@@ -63,17 +66,23 @@ const ActivityFeedTab = ({ activities, upcoming_activities }) => {
       </div>
       <div className="upcoming-activities">
         <h1 className="upcoming-activities__title">Upcoming Activities</h1>
-        <p className="upcoming-activities__empty-text">
-          Once actions are scheduled, they’ll appear here
-        </p>
+        {!upcomingActivitiesData.length && (
+          <p className="upcoming-activities__empty-text">
+            Once actions are scheduled, they’ll appear here
+          </p>
+        )}
       </div>
       <div className="past-activities">
         <h1 className="past-activities__title">Past Activities</h1>
         {/* the mocks don't include a text for an empty list, but i wanted to include it for consistency */}
-        <p className="past-activities__empty-text">
-          Once actions are done, they’ll appear here
-        </p>
-        <EventCard />
+        {!activitiesData.length && (
+          <p className="past-activities__empty-text">
+            Once actions are done, they’ll appear here
+          </p>
+        )}
+        {activitiesData &&
+          activitiesData.length &&
+          renderPastActivitites(activitiesData)}
       </div>
     </div>
   );

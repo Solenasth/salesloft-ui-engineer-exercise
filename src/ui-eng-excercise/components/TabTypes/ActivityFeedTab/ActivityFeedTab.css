@@ -68,6 +68,26 @@
   cursor: pointer;
 }
 
+.upcoming-activities__title,
+.past-activities__title {
+  font-family: proxima-nova;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: normal;
+  color: var(--grey-dark);
+}
+
+.upcoming-activities__empty-text,
+.past-activities__empty-text {
+  font-family: proxima-nova;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: var(--grey-dark);
+  text-align: center;
+  margin: 1.2em 0;
+}
+
 /* this two rules are here as a "Quick Fix" the icon's positioning is not centered, 
 and their sizes don't match so a single padding won't do.
 so even tho they're aligned, it doesn't look right

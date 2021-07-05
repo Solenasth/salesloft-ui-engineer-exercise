@@ -1,10 +1,18 @@
 import React from 'react';
 import './ActivitiesPanel.css';
+import Tabs from '../../Tabs';
+import Tab from '../../Tab';
 
 const ActivitiesPanel = ({ payload }) => {
   return (
     <>
-      <div className="activities-panel-titlebar"> Activities </div>
+      <div className="activities-panel">
+        <Tabs>
+          <Tab tabType="activityFeed" title="Activity"></Tab>
+          <Tab title="Tracking"></Tab>
+          <Tab tabType="activityFeed" title="Reminders"></Tab>
+        </Tabs>
+      </div>
     </>
   );
 };

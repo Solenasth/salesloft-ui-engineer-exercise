@@ -156,6 +156,8 @@ code {
   --grey-dark: #4f5359;
   --grey-darkest: #3a3a3a;
   /* blues */
+  --blue-light: #4dc6ff;
+  --blue: #3c9cd2;
   --blue-dark: #297dae;
   /* vendor colors */
   --vendor-twitter-blue: #1da1f2;

@@ -27,7 +27,9 @@ const Panel = ({ type, ...rest }) => {
     }
   };
   return (
-    <div className={`panel ${rest.className}`}>{renderPanelType(type)}</div>
+    <div className={`panel ${rest.className ? rest.className : ''}`}>
+      {renderPanelType(type)}
+    </div>
   );
 };
 

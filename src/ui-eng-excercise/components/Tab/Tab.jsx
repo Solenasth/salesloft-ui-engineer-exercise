@@ -11,6 +11,7 @@ const Tab = ({ tabType, title, ...rest }) => {
           <ActivityFeedTab
             activities={rest.activities}
             upcoming_activities={rest.upcoming_activities}
+            display_name={rest.display_name}
           />
         );
       default:

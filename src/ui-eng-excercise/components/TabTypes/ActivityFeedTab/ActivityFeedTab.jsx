@@ -5,7 +5,7 @@ import { default as PhoneIcon } from '../../../../_starter/shared/Icons/Phone';
 import { default as PlusIcon } from '../../../../_starter/shared/Icons/Plus';
 import EventCard from '../../EventCard';
 
-const ActivityFeedTab = ({ activities, upcoming_activities }) => {
+const ActivityFeedTab = ({ activities, upcoming_activities, display_name }) => {
   const [activitiesData, setActivitiesData] = useState([]);
   const [upcomingActivitiesData, setUpcomingActivitiesData] = useState([]);
 
@@ -34,7 +34,9 @@ const ActivityFeedTab = ({ activities, upcoming_activities }) => {
   }, [upcoming_activities]);
 
   const renderPastActivitites = activities =>
-    activities.map(activity => <EventCard eventData={activity} />);
+    activities.map(activity => (
+      <EventCard eventData={activity} display_name={display_name} />
+    ));
 
   return (
     <div className="activity-feed">

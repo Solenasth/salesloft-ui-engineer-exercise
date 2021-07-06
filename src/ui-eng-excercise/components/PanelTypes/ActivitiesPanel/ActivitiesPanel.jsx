@@ -13,6 +13,7 @@ const ActivitiesPanel = ({ payload }) => {
             title="Activity"
             activities={payload.activities}
             upcoming_activities={payload.upcoming_activities}
+            display_name={payload.display_name}
           ></Tab>
           <Tab title="Tracking"></Tab>
           <Tab tabType="activityFeed" title="Reminders"></Tab>

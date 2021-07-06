@@ -6,8 +6,10 @@ import { default as BadgeIcon } from '../../../_starter/shared/Icons/Badge';
 import { default as PaperPlaneIcon } from '../../../_starter/shared/Icons/PaperPlane';
 import { default as ReplyIcon } from '../../../_starter/shared/Icons/Reply';
 import { default as RocketIcon } from '../../../_starter/shared/Icons/Rocket';
+import { default as EyeIcon } from '../../../_starter/shared/Icons/Eye';
+import { default as ClickIcon } from '../../../_starter/shared/Icons/Click';
 
-const EventCard = ({ eventData }) => {
+const EventCard = ({ eventData, display_name }) => {
   const { type, created_at, static_data, dynamic_data } = eventData;
 
   const parseMinutes = minutes => {
@@ -16,6 +18,57 @@ const EventCard = ({ eventData }) => {
     var minutes = (hours - rhours) * 60;
     var rminutes = Math.round(minutes);
     return `${rhours}:${rminutes}`;
+  };
+
+  const getInteractionCounts = ({ views, clicks, replies }) => {
+    return (
+      <>
+        <span className="card-dynamic-counts">
+          <span className="card-dynamic-counts__views">
+            <EyeIcon />
+            {views}
+          </span>
+          <span className="card-dynamic-counts__clicks">
+            <ClickIcon />
+            {clicks}
+          </span>
+          <span className="card-dynamic-counts__replies">
+            <ReplyIcon />
+            {replies}
+          </span>
+        </span>
+      </>
+    );
+  };
+
+  const getDynamicContent = (type, static_data, dynamic_data, display_name) => {
+    switch (type) {
+      case 'voicemail':
+        return <span>{`${display_name} to ${dynamic_data.user_name}`}</span>;
+      case 'success':
+        return <span>{dynamic_data.user_name}</span>;
+      case 'sent_email':
+      case 'email_reply':
+        return (
+          <>
+            <span>{dynamic_data.user_name}</span>
+            <span>|</span>
+            {getInteractionCounts(dynamic_data.counts)}
+          </>
+        );
+      case 'call':
+        return (
+          <span>{`${display_name} with ${dynamic_data.phone_number}`}</span>
+        );
+      case 'added_to_cadence':
+        return (
+          <>
+            <span>{`Added by ${static_data.instigator.action_caller_name} | Assigned to ${dynamic_data.user_name}`}</span>
+          </>
+        );
+      default:
+        return 'content not available';
+    }
   };
 
   const getDynamicTitle = (type, static_data, dynamic_data) => {
@@ -87,6 +140,11 @@ const EventCard = ({ eventData }) => {
     }
   };
 
+  /* in a more complete implementation, we would use some other tool to also deal with timezones
+  something like moment.js, and have them reacted to the user's timezone.
+  since this is basically a mockup i decided that the vanilla tools are Enough. 
+  but it's definetly in the list for improvements */
+
   const getDate = timsestamp =>
     new Date(timsestamp).toLocaleString('en-US', {
       month: 'short',
@@ -110,9 +168,10 @@ const EventCard = ({ eventData }) => {
         <div className="card-body__content">
           <h1 className="card-dynamic-title">
             {getDynamicTitle(type, static_data, dynamic_data)}
-            {console.log(dynamic_data)}
           </h1>
-          <p className="card-dynamic-content">neptune was mutated</p>
+          <p className="card-dynamic-content">
+            {getDynamicContent(type, static_data, dynamic_data, display_name)}
+          </p>
         </div>
         <div className="card-datetime">
           <p className="card-datetime__date">{getDate(created_at)}</p>

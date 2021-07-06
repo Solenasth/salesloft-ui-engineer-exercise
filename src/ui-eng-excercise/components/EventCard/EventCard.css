@@ -61,18 +61,36 @@
 }
 
 .card-dynamic-content {
+  display: flex;
+  gap: 0.5em;
   font-family: proxima-nova;
   font-weight: normal;
   font-size: 12px;
   color: var(--grey);
   margin: 0;
 }
+
+.card-dynamic-counts {
+  display: flex;
+  gap: 0.8em;
+}
+
+.card-dynamic-counts__clicks,
+.card-dynamic-counts__views,
+.card-dynamic-counts__replies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2em;
+}
+
 .card-datetime {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 0.4em;
 }
+
 .card-datetime__date,
 .card-datetime__time {
   font-family: proxima-nova;

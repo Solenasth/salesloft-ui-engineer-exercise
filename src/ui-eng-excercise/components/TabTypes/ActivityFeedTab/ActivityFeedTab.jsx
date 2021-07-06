@@ -73,6 +73,11 @@ const ActivityFeedTab = ({ activities, upcoming_activities, display_name }) => {
             Once actions are scheduled, they’ll appear here
           </p>
         )}
+        {upcomingActivitiesData && upcomingActivitiesData.length ? (
+          renderPastActivitites(upcomingActivitiesData)
+        ) : (
+          <></>
+        )}
       </div>
       <div className="past-activities">
         <h1 className="past-activities__title">Past Activities</h1>
@@ -82,9 +87,11 @@ const ActivityFeedTab = ({ activities, upcoming_activities, display_name }) => {
             Once actions are done, they’ll appear here
           </p>
         )}
-        {activitiesData &&
-          activitiesData.length &&
-          renderPastActivitites(activitiesData)}
+        {activitiesData && activitiesData.length ? (
+          renderPastActivitites(activitiesData)
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

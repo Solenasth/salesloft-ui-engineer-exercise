@@ -1,0 +1,17 @@
+.placeholder-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.placeholder-tab__title {
+  font-family: proxima-nova;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.placeholder-tab__subtitle {
+  font-family: proxima-nova;
+  font-weight: 400;
+  font-size: 20px;
+}

@@ -6,7 +6,6 @@
 
 /* 
   currently in css3 you cannot use var()'s in media queries.
-  what we can do is media query our root values, so i will define some vars 
   this is normally worked around by using a pre-procesor, since im trying to do 
   this whole exercise with vanilla css. i will not do that here. 
 

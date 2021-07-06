@@ -5,16 +5,24 @@
   gap: 1em;
 }
 
-.event-card__icon {
+.event-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  color: darkred;
-  background-color: lightcoral;
   border-radius: 100%;
   min-width: 2em;
   height: 2em;
+  position: relative;
+}
+
+.event-icon .event-icon__background {
+  height: 2em;
+  width: 2em;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .card-body {
@@ -64,4 +72,44 @@
   font-weight: 600;
   font-size: 12px;
   color: var(--grey);
+}
+
+/* ######  icon Color clases ####### */
+/* call, Voicemail */
+.event-icon.call .event-icon__background,
+.event-icon.voicemail .event-icon__background {
+  background-color: var(--teal);
+  opacity: 0.1;
+}
+
+.event-icon.call .event-icon__icon,
+.event-icon.voicemail .event-icon__icon {
+  height: 1em;
+  color: var(--teal);
+}
+
+/* success, email_relply, sent_email */
+.event-icon.success .event-icon__background,
+.event-icon.email_reply .event-icon__background,
+.event-icon.sent_email .event-icon__background {
+  background-color: var(--indigo);
+  opacity: 0.1;
+}
+
+.event-icon.success .event-icon__icon,
+.event-icon.email_reply .event-icon__icon,
+.event-icon.sent_email .event-icon__icon {
+  height: 1em;
+  color: var(--indigo);
+}
+
+/* added_to_cadence */
+.event-icon.added_to_cadence .event-icon__background {
+  background-color: var(--blue);
+  opacity: 0.1;
+}
+
+.event-icon.added_to_cadence .event-icon__icon {
+  height: 1em;
+  color: var(--blue);
 }

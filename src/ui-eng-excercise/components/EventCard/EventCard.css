@@ -46,10 +46,18 @@
 
 .card-dynamic-title {
   font-family: proxima-nova;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   color: var(--grey-dark);
   margin: 0;
+}
+
+.card-dynamic-title--bold {
+  font-weight: 600;
+}
+.card-dynamic-title--highlight {
+  font-weight: 600;
+  color: var(--blue-dark);
 }
 
 .card-dynamic-content {

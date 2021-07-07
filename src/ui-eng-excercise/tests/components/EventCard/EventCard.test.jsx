@@ -202,7 +202,7 @@ describe('EventCard, when a email reply event is received', () => {
 });
 
 //sent call event
-describe('EventCard, when a email reply event is received', () => {
+describe('EventCard, when a call event is received', () => {
   test('renders a visible eventcard', () => {
     render(<EventCard eventData={CALL_EVENT} />);
     const panel = document.getElementsByClassName('event-card')[0];
@@ -235,7 +235,7 @@ describe('EventCard, when a email reply event is received', () => {
 });
 
 //sent added to cadence event
-describe('EventCard, when a email reply event is received', () => {
+describe('EventCard, when a added to cadence event is received', () => {
   test('renders a visible eventcard', () => {
     render(<EventCard eventData={ADDED_TO_CADENCE_EVENT} />);
     const panel = document.getElementsByClassName('event-card')[0];

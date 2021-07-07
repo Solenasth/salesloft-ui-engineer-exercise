@@ -15,9 +15,9 @@ const EventCard = ({ eventData, display_name }) => {
   const parseMinutes = minutes => {
     let hours = minutes / 60;
     var rhours = Math.floor(hours);
-    var minutes = (hours - rhours) * 60;
-    var rminutes = Math.round(minutes);
-    return `${rhours}:${rminutes}`;
+    var mins = (hours - rhours) * 60;
+    var rmins = Math.round(mins);
+    return `${rhours}:${rmins}`;
   };
 
   const getInteractionCounts = ({ views, clicks, replies }) => {

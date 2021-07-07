@@ -34,8 +34,12 @@ const ActivityFeedTab = ({ activities, upcoming_activities, display_name }) => {
   }, [upcoming_activities]);
 
   const renderPastActivitites = activities =>
-    activities.map(activity => (
-      <EventCard eventData={activity} display_name={display_name} />
+    activities.map((activity, i) => (
+      <EventCard
+        eventData={activity}
+        display_name={display_name}
+        key={`EventCard__${i}`}
+      />
     ));
 
   return (

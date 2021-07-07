@@ -1,7 +1,7 @@
 import React from 'react';
 import './PlaceholderTab.css';
 
-const PlaceholderTab = ({}) => {
+const PlaceholderTab = () => {
   return (
     <div className="placeholder-tab">
       <h1 className="placeholder-tab__title">Whoops!</h1>

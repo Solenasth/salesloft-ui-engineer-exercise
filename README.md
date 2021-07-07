@@ -18,7 +18,31 @@ please consider hiring me 😛
   `$ npm start`
 - Go to `http://localhost:3000/`
 
-## Project Overview
+## Tools Used
+
+- vanilla react
+- vanilla css3 ( 💜)
+- BEM
+- react-testing-library
+- a lot of js
+
+## Dev comements on tools
+
+After a longtime using sass and scss, I recently rediscovered the power of css3, and I've been trying to use it whenever possible.
+
+This project was completed using only _'vanilla'_ tools. so I also didn't use any npm's or external libraries for components like tab navigation for example.
+Also: BEM best practices get a little bit weird when a block is inside another block, so I tried to adhere as best as possible.
+
+I wanted to make a secondary version using styled components. But instead I decided to use the time to add more tests and more polish. maybe later I will.
+
+## Posible further improvements.
+
+**AKA: What would I do if I had another weekend.**
+
+- Replace the tab highlight with an animated element that changes size depending on the tab title.
+- Make an alternate version using Styled Components.
+- Add other misc. animations like spinners for loading.
+- Add more tests for the rest of the compoments.
 
 ## A note on safari < 14.1
 
